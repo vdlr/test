@@ -1,11 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { BirthdaylistComponent } from './birthdaylist/birthdaylist.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        BirthdaylistComponent
       ],
     }).compileComponents();
   }));
@@ -26,6 +28,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('birthday app is running!');
+    expect(compiled.querySelector('h1').textContent).toContain('Comité de supervisones Octubre 2019');
   });
 });
